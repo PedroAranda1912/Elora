@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f3f3">
+  <title>Detalhes do serviço — Elora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refinement.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
+  <header><a href="index.html" class="logo">elora<span class="logo-mark" aria-hidden="true"></span></a>
+    <nav id="nav-menu" aria-label="Navegação principal"></nav>
+  </header>
+  <main class="container service-detail-main service-market-detail-page" id="main-content" tabindex="-1"><a
+      class="detail-back" href="servicos.html"><span aria-hidden="true">←</span> Todos os serviços</a>
+    <div id="service-detail-message" class="detail-message" role="status" aria-live="polite">Carregando serviço…</div>
+    <article id="service-detail" class="service-detail service-market-detail card" hidden>
+      <div class="service-detail-gallery">
+        <div class="service-detail-image"><img id="service-image" alt=""></div>
+        <div id="service-gallery" class="service-gallery-thumbs" aria-label="Galeria do serviço"></div>
+      </div>
+      <div class="service-detail-copy">
+        <div class="service-detail-topline"><span id="service-category" class="badge badge-status"></span><button
+            id="service-favorite" class="btn btn-secondary" type="button" aria-pressed="false">Favoritar</button></div>
+        <h1 id="service-title"></h1>
+        <p id="service-description" class="service-detail-lead"></p>
+        <div id="service-provider-stats" class="service-provider-stats"></div>
+        <a id="service-seller-link" class="service-professional-card" href="#"><span id="service-seller-avatar"
+            class="service-professional-avatar">E</span><span class="service-professional-copy"><small>SEU
+              PROFISSIONAL</small><strong id="service-seller-name"></strong><span
+              id="service-seller-meta"></span></span><span aria-hidden="true">→</span></a>
+        <section class="service-package-section">
+          <div class="service-package-heading">
+            <h2>Escolha seu pacote</h2><span id="service-package-note">Pagamento não incluído</span>
+          </div>
+          <div id="service-packages" class="service-package-grid"></div>
+        </section>
+        <div id="service-detail-meta" class="service-details-meta"></div>
+        <div class="service-actions"><button id="service-message" class="btn btn-secondary" type="button">Enviar
+            mensagem</button><button id="service-request" class="btn" type="button">Solicitar serviço</button></div>
+      </div>
+    </article>
+    <section class="service-info-section" id="service-about-section" hidden>
+      <div class="service-info-main">
+        <div>
+          <h2>Sobre este serviço</h2>
+          <p id="service-long-description" class="service-long-description"></p>
+        </div>
+        <div id="service-tags" class="service-detail-tags"></div>
+        <div id="service-portfolio-section" hidden>
+          <h2>Portfólio</h2>
+          <div id="service-portfolio" class="service-portfolio-grid"></div>
+        </div>
+        <div id="service-faq-section" hidden>
+          <h2>Perguntas frequentes</h2>
+          <div id="service-faq" class="service-faq-list"></div>
+        </div>
+        <div>
+          <h2>Avaliações de clientes</h2>
+          <div id="service-reviews" class="reviews-list"></div>
+        </div>
+        <div>
+          <div class="service-related-heading">
+            <h2>Mais serviços desta especialidade</h2><a id="service-related-link" href="servicos.html">Ver todos</a>
+          </div>
+          <div id="service-related" class="service-related-grid"></div>
+        </div>
+      </div>
+      <aside class="service-info-aside">
+        <h2>Um projeto começa com uma boa conversa</h2>
+        <p>Compartilhe seu objetivo e alinhem os próximos passos diretamente com quem vai realizar o trabalho.</p>
+        <button class="btn" id="service-contact-cta" type="button">Conversar com o profissional</button>
+      </aside>
+    </section>
+    <section class="listing-qa-section" id="service-qa-section" hidden>
+      <div class="section-heading">
+        <div>
+          <h2>Perguntas sobre este serviço</h2>
+          <p>Esclareça detalhes diretamente na página do serviço.</p>
+        </div>
+      </div>
+      <form id="listing-question-form" class="listing-question-form"><label for="listing-question-input">Sua
+          pergunta</label><textarea id="listing-question-input" maxlength="1000" rows="3" required
+          placeholder="Escreva uma pergunta sobre o serviço."></textarea>
+        <div class="qa-form-footer">
+          <div id="listing-question-feedback" class="alert" role="status"></div><button class="btn" type="submit">Enviar
+            pergunta</button>
+        </div>
+      </form>
+      <div id="listing-questions" class="listing-question-list">
+        <p class="loading-state">Carregando perguntas…</p>
+      </div>
+    </section>
+  </main>
+  <dialog id="service-request-dialog" class="elora-dialog service-request-dialog">
+    <form id="service-request-form"><button class="dialog-close" type="button" aria-label="Fechar"
+        data-dialog-close>×</button>
+      <p class="catalog-eyebrow">Nova solicitação</p>
+      <h2>Conte o que você precisa</h2>
+      <div id="request-package-summary" class="request-package-summary"></div><label
+        for="service-request-description">Explique seu projeto</label><textarea id="service-request-description"
+        rows="5" required maxlength="2000"
+        placeholder="Conte seu objetivo, contexto e detalhes importantes para o profissional."></textarea>
+      <p class="checkout-inline-note">A solicitação não gera pagamento. O profissional poderá conversar com você e
+        atualizar o andamento.</p>
+      <div id="service-request-message" class="alert" role="status"></div><button class="btn" type="submit">Enviar
+        solicitação</button>
+    </form>
+  </dialog>
+  <dialog id="service-message-dialog" class="elora-dialog">
+    <form id="service-message-form"><button class="dialog-close" type="button" aria-label="Fechar"
+        data-dialog-close>×</button>
+      <h2>Fale com o profissional</h2><label for="service-message-content">Mensagem</label><textarea
+        id="service-message-content" rows="4" required maxlength="4000" placeholder="Escreva sua mensagem…"></textarea>
+      <div id="service-message-feedback" class="alert" role="status"></div><button class="btn" type="submit">Enviar
+        mensagem</button>
+    </form>
+  </dialog>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/qa.js"></script>
+  <script src="js/service-detail.js"></script>
+  <script src="js/motion.js"></script>
+  <footer class="site-footer">
+    <div class="footer-brand-column">
+      <a href="index.html" class="footer-brand" aria-label="Elora, página inicial">elora<span class="logo-mark" aria-hidden="true"></span></a>
+      <p>Produtos, serviços e conexões da comunidade, num só lugar.</p>
+    </div>
+    <nav class="site-footer-column" aria-label="Explorar"><h2>Explorar</h2><a href="produtos.html">Produtos</a><a href="servicos.html">Serviços</a><a href="projetos.html">Projetos</a></nav>
+    <nav class="site-footer-column" aria-label="Publique"><h2>Publique</h2><a href="publicar-produto.html">Anunciar produto</a><a href="oferecer-servico.html">Oferecer serviço</a><a href="publicar-projeto.html">Publicar projeto</a></nav>
+    <nav class="site-footer-column" aria-label="Sua conta" data-footer-account><h2>Sua conta</h2><a href="login.html">Entrar</a><a href="cadastro.html">Criar conta</a></nav>
+    <div class="site-footer-bottom"><small>© <span id="footer-year">2026</span> Elora</small><a href="mailto:contato@elora.com.br">Fale com a gente</a></div>
+  </footer>
+</body>
+
+</html>

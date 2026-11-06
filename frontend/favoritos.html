@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f3f3">
+  <title>Favoritos — Elora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refinement.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
+  <header><a href="index.html" class="logo">elora<span class="logo-mark" aria-hidden="true"></span></a>
+    <nav id="nav-menu" aria-label="Navegação principal"></nav>
+  </header>
+  <main class="container account-page" id="main-content" tabindex="-1">
+    <div class="page-intro">
+      <div>
+        <h1>Seus favoritos</h1>
+        <p>Anúncios que você salvou para encontrar depois.</p>
+      </div>
+    </div>
+    <div class="segmented-control" role="group" aria-label="Tipo de anúncio"><button type="button" class="is-active"
+        data-favorite-filter="ALL">Todos</button><button type="button"
+        data-favorite-filter="PRODUCT">Produtos</button><button type="button"
+        data-favorite-filter="SERVICE">Serviços</button></div>
+    <div id="favorites-list" class="grid">
+      <p class="empty-state">Carregando favoritos…</p>
+    </div>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/favorites-page.js"></script>
+  <script src="js/motion.js"></script>
+  <footer class="site-footer">
+    <div class="footer-brand-column">
+      <a href="index.html" class="footer-brand" aria-label="Elora, página inicial">elora<span class="logo-mark" aria-hidden="true"></span></a>
+      <p>Produtos, serviços e conexões da comunidade, num só lugar.</p>
+    </div>
+    <nav class="site-footer-column" aria-label="Explorar"><h2>Explorar</h2><a href="produtos.html">Produtos</a><a href="servicos.html">Serviços</a><a href="projetos.html">Projetos</a></nav>
+    <nav class="site-footer-column" aria-label="Publique"><h2>Publique</h2><a href="publicar-produto.html">Anunciar produto</a><a href="oferecer-servico.html">Oferecer serviço</a><a href="publicar-projeto.html">Publicar projeto</a></nav>
+    <nav class="site-footer-column" aria-label="Sua conta" data-footer-account><h2>Sua conta</h2><a href="login.html">Entrar</a><a href="cadastro.html">Criar conta</a></nav>
+    <div class="site-footer-bottom"><small>© <span id="footer-year">2026</span> Elora</small><a href="mailto:contato@elora.com.br">Fale com a gente</a></div>
+  </footer>
+</body>
+
+</html>

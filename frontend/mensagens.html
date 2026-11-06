@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f3f3">
+  <title>Mensagens — Elora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refinement.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
+  <header><a href="index.html" class="logo">elora<span class="logo-mark" aria-hidden="true"></span></a>
+    <nav id="nav-menu" aria-label="Navegação principal"></nav>
+  </header>
+  <main class="container account-page" id="main-content" tabindex="-1">
+    <div class="page-intro">
+      <div>
+        <h1>Mensagens</h1>
+        <p>Combine os detalhes com quem anunciou.</p>
+      </div>
+    </div>
+    <section class="messages-layout card" id="messages-layout">
+      <aside class="conversation-sidebar" aria-label="Conversas"><label class="conversation-search"><span
+            class="sr-only">Buscar conversas</span><svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m16 16 4 4"></path>
+          </svg><input id="conversation-search" type="search" placeholder="Buscar conversas" autocomplete="off"></label>
+        <div class="conversation-list" id="conversation-list" aria-label="Conversas">
+          <p class="empty-state">Carregando conversas…</p>
+        </div>
+      </aside>
+      <div class="conversation-panel" id="conversation-panel">
+        <div class="conversation-placeholder"><span class="messages-placeholder-icon" aria-hidden="true"><svg
+              viewBox="0 0 24 24">
+              <path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l1.7-3.4A7.5 7.5 0 1 1 20 11.5Z"></path>
+            </svg></span>
+          <h2>Suas conversas, em um só lugar</h2>
+          <p>Escolha uma conversa para retomar o assunto do anúncio.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/messages.js"></script>
+  <script src="js/motion.js"></script>
+  <footer class="site-footer">
+    <div class="footer-brand-column">
+      <a href="index.html" class="footer-brand" aria-label="Elora, página inicial">elora<span class="logo-mark" aria-hidden="true"></span></a>
+      <p>Produtos, serviços e conexões da comunidade, num só lugar.</p>
+    </div>
+    <nav class="site-footer-column" aria-label="Explorar"><h2>Explorar</h2><a href="produtos.html">Produtos</a><a href="servicos.html">Serviços</a><a href="projetos.html">Projetos</a></nav>
+    <nav class="site-footer-column" aria-label="Publique"><h2>Publique</h2><a href="publicar-produto.html">Anunciar produto</a><a href="oferecer-servico.html">Oferecer serviço</a><a href="publicar-projeto.html">Publicar projeto</a></nav>
+    <nav class="site-footer-column" aria-label="Sua conta" data-footer-account><h2>Sua conta</h2><a href="login.html">Entrar</a><a href="cadastro.html">Criar conta</a></nav>
+    <div class="site-footer-bottom"><small>© <span id="footer-year">2026</span> Elora</small><a href="mailto:contato@elora.com.br">Fale com a gente</a></div>
+  </footer>
+</body>
+
+</html>

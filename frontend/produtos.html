@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f3f3">
+  <title>Comprar produtos — Elora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refinement.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
+  <header><a href="index.html" class="logo">elora<span class="logo-mark" aria-hidden="true"></span></a>
+    <nav id="nav-menu" aria-label="Navegação principal"></nav>
+  </header>
+  <main class="container products-catalog-page" id="main-content" tabindex="-1">
+    <div class="catalog-heading">
+      <div>
+        <p class="catalog-eyebrow">Marketplace de produtos</p>
+        <h1>Encontre seu próximo achado.</h1>
+        <p>Explore itens anunciados por pessoas da comunidade.</p>
+      </div><a class="btn" href="vender.html">Anunciar produto <span aria-hidden="true">→</span></a>
+    </div>
+    <button id="open-product-filters" class="btn btn-secondary product-mobile-filter" type="button" aria-haspopup="dialog" aria-controls="product-filter-dialog">Filtrar produtos</button>
+    <dialog id="product-filter-dialog" class="product-filter-dialog" aria-labelledby="product-filter-heading">
+      <div class="product-filter-dialog-header">
+        <div><h2 id="product-filter-heading">Filtrar produtos</h2><p>Refine os resultados por categoria, preço e localização.</p></div>
+        <button id="close-product-filters" class="product-filter-close" type="button" aria-label="Fechar filtros">×</button>
+      </div>
+      <section class="filters-panel catalog-filter-grid" aria-label="Filtros de produtos">
+        <div class="filter-search"><label for="product-search">Buscar</label><input id="product-search" type="search" placeholder="Nome, descrição ou categoria" autocomplete="off"></div>
+        <div class="filter-control"><label for="product-category">Categoria</label><select id="product-category"><option value="">Todas</option></select></div>
+        <div class="filter-control"><label for="product-condition">Condição</label><select id="product-condition"><option value="">Todas</option><option value="NOVO">Novo</option><option value="USADO">Usado</option></select></div>
+        <div class="filter-price"><label>Faixa de preço</label><div><input id="product-min-price" type="number" min="0" step="0.01" placeholder="Mínimo" aria-label="Preço mínimo"><span aria-hidden="true">–</span><input id="product-max-price" type="number" min="0" step="0.01" placeholder="Máximo" aria-label="Preço máximo"></div></div>
+        <div class="filter-control"><label for="product-location">Localização</label><input id="product-location" type="search" placeholder="Cidade ou região"></div>
+        <div class="filter-control"><label for="product-sort">Ordenar por</label><select id="product-sort"><option value="recent">Mais recentes</option><option value="asc">Menor preço</option><option value="desc">Maior preço</option></select></div>
+        <label class="filter-checkbox"><input id="product-in-stock" type="checkbox"><span>Disponível agora</span></label>
+        <button id="clear-product-filters" class="btn btn-secondary filter-clear" type="button">Limpar filtros</button>
+      </section>
+      <div class="product-filter-dialog-actions"><button id="apply-product-filters" class="btn" type="button">Ver resultados</button></div>
+    </dialog>
+    <div class="catalog-results-row">
+      <p id="product-results" class="filter-results" aria-live="polite">Carregando…</p><span
+        class="catalog-trust">Anúncios publicados pela comunidade Elora</span>
+    </div>
+    <div id="msg" class="alert" role="status" aria-live="polite"></div>
+    <div class="grid product-grid" id="product-list" aria-live="polite">
+      <p class="empty-state">Carregando produtos…</p>
+    </div><button id="load-more-products" class="btn btn-secondary load-more-button" type="button" hidden>Carregar
+      mais</button>
+  </main>
+  <aside id="product-compare-dock" class="compare-dock" hidden aria-live="polite"><span><strong
+        id="compare-count">0</strong>/4 produtos para comparar</span><button class="btn btn-secondary"
+      id="clear-comparison" type="button">Limpar</button><a class="btn" href="comparar.html">Comparar</a></aside>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/listing-cards.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/motion.js"></script>
+  <footer class="site-footer">
+    <div class="footer-brand-column">
+      <a href="index.html" class="footer-brand" aria-label="Elora, página inicial">elora<span class="logo-mark" aria-hidden="true"></span></a>
+      <p>Produtos, serviços e conexões da comunidade, num só lugar.</p>
+    </div>
+    <nav class="site-footer-column" aria-label="Explorar"><h2>Explorar</h2><a href="produtos.html">Produtos</a><a href="servicos.html">Serviços</a><a href="projetos.html">Projetos</a></nav>
+    <nav class="site-footer-column" aria-label="Publique"><h2>Publique</h2><a href="publicar-produto.html">Anunciar produto</a><a href="oferecer-servico.html">Oferecer serviço</a><a href="publicar-projeto.html">Publicar projeto</a></nav>
+    <nav class="site-footer-column" aria-label="Sua conta" data-footer-account><h2>Sua conta</h2><a href="login.html">Entrar</a><a href="cadastro.html">Criar conta</a></nav>
+    <div class="site-footer-bottom"><small>© <span id="footer-year">2026</span> Elora</small><a href="mailto:contato@elora.com.br">Fale com a gente</a></div>
+  </footer>
+</body>
+
+</html>

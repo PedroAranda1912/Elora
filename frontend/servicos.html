@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f3f3">
+  <title>Serviços e profissionais — Elora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refinement.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
+  <header><a href="index.html" class="logo">elora<span class="logo-mark" aria-hidden="true"></span></a>
+    <nav id="nav-menu" aria-label="Navegação principal"></nav>
+  </header>
+  <main class="container services-marketplace-page" id="main-content" tabindex="-1">
+    <section class="services-market-hero">
+      <div class="services-market-hero-copy">
+        <p class="catalog-eyebrow">Talentos que movem ideias</p>
+        <h1>Encontre alguém para fazer o que você precisa.</h1>
+        <p>Explore serviços, compare profissionais e encontre a solução certa para o seu projeto.</p>
+        <form id="service-search-form" class="service-search-box" role="search"><svg viewBox="0 0 24 24"
+            aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.8" />
+            <path d="m16 16 5 5" />
+          </svg><input id="service-search" type="search" placeholder="Do que você precisa?"
+            aria-label="Buscar serviços ou profissionais" autocomplete="off"><button type="submit"
+            class="btn">Buscar</button></form>
+        <div class="service-search-suggestions" aria-label="Buscas sugeridas"><span>Experimente</span><button
+            type="button" data-service-query="Criar um site">Criar um site</button><button type="button"
+            data-service-query="Editar um vídeo">Editar um vídeo</button><button type="button"
+            data-service-query="Fazer uma logo">Fazer uma logo</button><button type="button"
+            data-service-query="Gerenciar Instagram">Gerenciar Instagram</button></div>
+      </div>
+      <aside class="services-market-hero-aside"><span class="services-orbit"
+          aria-hidden="true"><i></i><i></i><i></i></span><span class="services-hero-caption">Habilidades
+          independentes.<br>Projetos que ganham forma.</span></aside>
+    </section>
+    <section class="service-category-section" aria-labelledby="service-category-heading">
+      <div class="service-category-heading">
+        <h2 id="service-category-heading">Explore por especialidade</h2><span>Encontre o talento certo para cada
+          etapa.</span>
+      </div>
+      <div id="service-category-chips" class="service-category-chips"><span class="category-loading">Carregando
+          especialidades…</span></div>
+    </section>
+    <section class="service-route-strip" aria-label="Encontre serviços ou publique um projeto"><a
+        href="#service-results-heading" class="service-route-card"><span class="service-route-icon"
+          aria-hidden="true"><svg viewBox="0 0 24 24">
+            <path d="M4 7h16M6 4h12v16H6zM9 11h6m-6 4h4" />
+          </svg></span><span><strong>Contratar um serviço</strong><small>Compare ofertas prontas de
+            profissionais</small></span><b aria-hidden="true">→</b></a><a href="oferecer-servico.html"
+        class="service-route-card"><span class="service-route-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+            <path d="M12 4v16M4 12h16" />
+          </svg></span><span><strong>Anunciar um serviço</strong><small>Crie seu serviço e ofereça para
+            clientes</small></span><b aria-hidden="true">→</b></a></section>
+    <div class="service-market-layout">
+      <dialog id="service-filter-dialog" class="service-filter-dialog" open aria-labelledby="service-filter-heading">
+        <div class="service-filter-dialog-header">
+          <div>
+            <h2 id="service-filter-heading">Refinar busca</h2>
+            <p>Use os critérios para comparar ofertas.</p>
+          </div><button id="close-service-filters" class="service-filter-close" type="button"
+            aria-label="Fechar filtros"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg></button>
+        </div>
+        <div class="service-filter-controls">
+          <div class="filter-control"><label for="service-category">Categoria</label><select id="service-category">
+              <option value="">Todas as especialidades</option>
+            </select></div>
+          <div class="filter-price"><label>Faixa de preço</label>
+            <div><input id="service-min-price" type="number" min="0" step="0.01" placeholder="Mínimo"
+                aria-label="Preço mínimo"><span aria-hidden="true">–</span><input id="service-max-price" type="number"
+                min="0" step="0.01" placeholder="Máximo" aria-label="Preço máximo"></div>
+          </div>
+          <div class="filter-control"><label for="service-max-days">Prazo máximo</label><select id="service-max-days">
+              <option value="">Qualquer prazo</option>
+              <option value="3">Até 3 dias</option>
+              <option value="7">Até 7 dias</option>
+              <option value="14">Até 14 dias</option>
+              <option value="30">Até 30 dias</option>
+            </select></div>
+          <div class="filter-control"><label for="service-min-rating">Avaliação mínima</label><select
+              id="service-min-rating">
+              <option value="">Qualquer avaliação</option>
+              <option value="3">3 estrelas ou mais</option>
+              <option value="4">4 estrelas ou mais</option>
+              <option value="4.5">4,5 estrelas ou mais</option>
+            </select></div>
+          <div class="filter-control"><label for="service-experience">Nível informado</label><select
+              id="service-experience">
+              <option value="">Todos os níveis</option>
+              <option value="Iniciante">Iniciante</option>
+              <option value="Intermediário">Intermediário</option>
+              <option value="Avançado">Avançado</option>
+            </select></div>
+          <div class="filter-control"><label for="service-location">Localização</label><input id="service-location"
+              type="search" placeholder="Cidade ou região"></div>
+          <div class="filter-control"><label for="service-mode">Formato</label><select id="service-mode">
+              <option value="">Online ou presencial</option>
+              <option value="ONLINE">Online</option>
+              <option value="PRESENCIAL">Presencial</option>
+              <option value="AMBOS">Online e presencial</option>
+            </select></div>
+          <div class="filter-control"><label for="service-sort">Ordenar por</label><select id="service-sort">
+              <option value="relevance">Relevância</option>
+              <option value="recent">Mais recentes</option>
+              <option value="asc">Menor preço</option>
+              <option value="rating">Maior avaliação</option>
+              <option value="sales">Mais trabalhos</option>
+            </select></div>
+        </div>
+        <div class="service-filter-actions"><button id="clear-service-filters" class="btn btn-secondary"
+            type="button">Limpar filtros</button><button id="apply-service-filters" class="btn service-filter-apply"
+            type="button">Ver serviços</button></div>
+      </dialog>
+      <section class="service-results-section" aria-labelledby="service-results-heading">
+        <div class="service-results-header">
+          <div>
+            <h2 id="service-results-heading">Serviços para tirar seu projeto do papel</h2>
+            <p id="service-results" aria-live="polite">Carregando ofertas…</p>
+          </div><button id="open-service-filters" class="btn btn-secondary service-mobile-filter" type="button"
+            aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M7 12h10m-7 5h4" />
+            </svg> Filtros <span id="active-service-filter-count" hidden></span></button>
+        </div>
+        <div id="service-list" class="grid service-grid" aria-live="polite">
+          <p class="empty-state">Carregando serviços…</p>
+        </div><button id="load-more-services" class="btn btn-secondary load-more-button" type="button" hidden>Carregar
+          mais serviços</button>
+      </section>
+    </div>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/listing-cards.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/motion.js"></script>
+  <footer class="site-footer">
+    <div class="footer-brand-column">
+      <a href="index.html" class="footer-brand" aria-label="Elora, página inicial">elora<span class="logo-mark" aria-hidden="true"></span></a>
+      <p>Produtos, serviços e conexões da comunidade, num só lugar.</p>
+    </div>
+    <nav class="site-footer-column" aria-label="Explorar"><h2>Explorar</h2><a href="produtos.html">Produtos</a><a href="servicos.html">Serviços</a><a href="projetos.html">Projetos</a></nav>
+    <nav class="site-footer-column" aria-label="Publique"><h2>Publique</h2><a href="publicar-produto.html">Anunciar produto</a><a href="oferecer-servico.html">Oferecer serviço</a><a href="publicar-projeto.html">Publicar projeto</a></nav>
+    <nav class="site-footer-column" aria-label="Sua conta" data-footer-account><h2>Sua conta</h2><a href="login.html">Entrar</a><a href="cadastro.html">Criar conta</a></nav>
+    <div class="site-footer-bottom"><small>© <span id="footer-year">2026</span> Elora</small><a href="mailto:contato@elora.com.br">Fale com a gente</a></div>
+  </footer>
+</body>
+
+</html>

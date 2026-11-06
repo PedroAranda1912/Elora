@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f3f3">
+  <title>Entrar — Elora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refinement.css">
+</head>
+
+<body class="auth-page">
+  <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
+  <header><a href="index.html" class="logo">elora<span class="logo-mark" aria-hidden="true"></span></a><a
+      href="index.html" class="auth-back">Voltar à página inicial</a></header>
+  <main class="auth-layout" id="main-content" tabindex="-1">
+    <section class="auth-story"><span class="auth-brand-mark" aria-hidden="true">E</span>
+      <h1>Boas trocas começam com uma conversa.</h1>
+      <p>Entre na Elora para acompanhar seus anúncios, pedidos e oportunidades.</p>
+      <div class="auth-story-note"><span>COMPRAR</span><i></i><span>VENDER</span><i></i><span>OFERECER</span></div>
+    </section>
+    <section class="auth-card">
+      <p class="catalog-eyebrow">Sua comunidade está por aqui</p>
+      <h2>Que bom ver você de novo.</h2>
+      <p class="muted-copy">Entre para continuar de onde parou.</p>
+      <div id="msg" class="alert" role="status" aria-live="polite"></div>
+      <form id="login-form">
+        <div class="form-group"><label for="email">E-mail</label><input id="email" type="email" autocomplete="email"
+            required placeholder="voce@exemplo.com"></div>
+        <div class="form-group">
+          <div class="label-row"><label for="password">Senha</label></div>
+          <div class="password-field"><input id="password" type="password" autocomplete="current-password"
+              required><button type="button" data-password-toggle="password" aria-label="Mostrar senha">Mostrar</button>
+          </div>
+        </div>
+        <div class="auth-form-options"><label class="check-label"><input type="checkbox" id="remember-me"
+              checked><span>Manter conectado</span></label><a class="auth-help-link"
+            href="mailto:contato@elora.com.br?subject=Ajuda%20para%20acessar%20minha%20conta">Precisa de ajuda para
+            entrar?</a></div><button id="login-submit" class="btn auth-submit" type="submit">Entrar na minha
+          conta</button>
+      </form>
+      <p class="auth-switch">Ainda não tem conta? <a href="cadastro.html">Criar uma conta</a></p>
+    </section>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/motion.js"></script>
+  <footer class="site-footer">
+    <div class="footer-brand-column">
+      <a href="index.html" class="footer-brand" aria-label="Elora, página inicial">elora<span class="logo-mark" aria-hidden="true"></span></a>
+      <p>Produtos, serviços e conexões da comunidade, num só lugar.</p>
+    </div>
+    <nav class="site-footer-column" aria-label="Explorar"><h2>Explorar</h2><a href="produtos.html">Produtos</a><a href="servicos.html">Serviços</a><a href="projetos.html">Projetos</a></nav>
+    <nav class="site-footer-column" aria-label="Publique"><h2>Publique</h2><a href="publicar-produto.html">Anunciar produto</a><a href="oferecer-servico.html">Oferecer serviço</a><a href="publicar-projeto.html">Publicar projeto</a></nav>
+    <nav class="site-footer-column" aria-label="Sua conta" data-footer-account><h2>Sua conta</h2><a href="login.html">Entrar</a><a href="cadastro.html">Criar conta</a></nav>
+    <div class="site-footer-bottom"><small>© <span id="footer-year">2026</span> Elora</small><a href="mailto:contato@elora.com.br">Fale com a gente</a></div>
+  </footer>
+</body>
+
+</html>

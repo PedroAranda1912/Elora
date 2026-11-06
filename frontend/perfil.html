@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f3f3">
+  <title>Meu perfil — Elora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refinement.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
+  <header><a href="index.html" class="logo">elora<span class="logo-mark" aria-hidden="true"></span></a>
+    <nav id="nav-menu" aria-label="Navegação principal"></nav>
+  </header>
+  <main class="container account-page" id="main-content" tabindex="-1">
+    <div class="page-intro">
+      <div>
+        <h1>Seu perfil</h1>
+        <p>Atualize como você aparece para quem compra ou contrata na Elora.</p>
+      </div><a class="btn btn-secondary" id="public-profile-link" href="#">Ver perfil público</a>
+    </div>
+    <section class="profile-layout">
+      <aside class="profile-summary card">
+        <div class="profile-avatar" id="profile-avatar">E</div>
+        <h2 id="profile-name-preview">Carregando perfil…</h2>
+        <p id="profile-city-preview"></p>
+        <div class="profile-stats" id="profile-stats"></div>
+      </aside>
+      <form id="profile-form" class="card account-form">
+        <div id="profile-message" class="alert" role="status" aria-live="polite"></div>
+        <div class="form-grid">
+          <div class="form-group"><label for="profile-name">Nome</label><input id="profile-name" name="name" required
+              maxlength="120"></div>
+          <div class="form-group"><label for="profile-email">E-mail</label><input id="profile-email" name="email"
+              type="email" readonly></div>
+          <div class="form-group"><label for="profile-city">Cidade</label><input id="profile-city" name="city"
+              maxlength="120" placeholder="Ex.: São Paulo, SP"></div>
+          <div class="form-group"><label for="profile-phone">Telefone de contato</label><input id="profile-phone"
+              name="phone" type="tel" maxlength="32"></div>
+          <div class="form-group form-wide"><label for="profile-avatar-url">Foto de perfil (URL)</label><input
+              id="profile-avatar-url" name="avatarUrl" type="url" maxlength="500" placeholder="https://…"></div>
+          <div class="form-group form-wide"><label for="profile-bio">Sobre você</label><textarea id="profile-bio"
+              name="bio" rows="4" maxlength="500"
+              placeholder="Conte um pouco sobre o que você vende ou oferece."></textarea></div>
+        </div>
+        <div class="form-actions"><span id="joined-at" class="muted-copy"></span><button class="btn"
+            type="submit">Salvar perfil</button></div>
+      </form>
+    </section>
+    <section class="profile-section portfolio-editor card">
+      <div class="section-heading">
+        <div>
+          <h2>Meu portfólio</h2>
+          <p>Mostre trabalhos reais e explique sua participação em cada projeto.</p>
+        </div>
+      </div>
+      <form id="portfolio-form" class="form-grid"><input type="hidden" name="itemId">
+        <div class="form-group"><label for="portfolio-title">Título do projeto</label><input id="portfolio-title"
+            name="title" maxlength="140" required></div>
+        <div class="form-group"><label for="portfolio-category">Categoria</label><input id="portfolio-category"
+            name="category" maxlength="80" required></div>
+        <div class="form-group form-wide"><label for="portfolio-description">Descrição</label><textarea
+            id="portfolio-description" name="description" rows="3" maxlength="1200" required></textarea></div>
+        <div class="form-group"><label for="portfolio-technologies">Tecnologias ou especialidades</label><input
+            id="portfolio-technologies" name="technologies" maxlength="500" placeholder="Ex.: Figma, React, fotografia">
+        </div>
+        <div class="form-group"><label for="portfolio-image">Imagem (URL)</label><input id="portfolio-image"
+            name="imageUrl" type="url" maxlength="500" placeholder="https://…"></div>
+        <div class="form-group form-wide"><label for="portfolio-link">Link do projeto (opcional)</label><input
+            id="portfolio-link" name="projectUrl" type="url" maxlength="500" placeholder="https://…"></div>
+        <div class="portfolio-form-actions form-wide">
+          <div id="portfolio-message" class="alert" role="status" aria-live="polite"></div><button class="btn"
+            type="submit" id="portfolio-submit">Adicionar ao portfólio</button><button class="btn btn-secondary"
+            type="button" id="portfolio-cancel" hidden>Cancelar edição</button>
+        </div>
+      </form>
+      <div id="portfolio-items" class="portfolio-management-list" aria-live="polite">
+        <p class="loading-state">Carregando portfólio…</p>
+      </div>
+    </section>
+    <section class="card change-password-section">
+      <h2>Segurança da conta</h2>
+      <p class="muted-copy">Escolha uma senha com pelo menos 8 caracteres, letras e números.</p>
+      <form id="password-form">
+        <div class="form-grid">
+          <div class="form-group"><label for="current-password">Senha atual</label><input id="current-password"
+              type="password" autocomplete="current-password" required></div>
+          <div class="form-group"><label for="new-password">Nova senha</label><input id="new-password" type="password"
+              autocomplete="new-password" minlength="8" required></div>
+          <div class="form-group"><label for="confirm-new-password">Confirmar nova senha</label><input
+              id="confirm-new-password" type="password" autocomplete="new-password" required></div>
+        </div>
+        <div id="password-message" class="alert" role="status"></div><button class="btn btn-secondary"
+          type="submit">Alterar senha</button>
+      </form>
+    </section>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/motion.js"></script>
+  <footer class="site-footer">
+    <div class="footer-brand-column">
+      <a href="index.html" class="footer-brand" aria-label="Elora, página inicial">elora<span class="logo-mark" aria-hidden="true"></span></a>
+      <p>Produtos, serviços e conexões da comunidade, num só lugar.</p>
+    </div>
+    <nav class="site-footer-column" aria-label="Explorar"><h2>Explorar</h2><a href="produtos.html">Produtos</a><a href="servicos.html">Serviços</a><a href="projetos.html">Projetos</a></nav>
+    <nav class="site-footer-column" aria-label="Publique"><h2>Publique</h2><a href="publicar-produto.html">Anunciar produto</a><a href="oferecer-servico.html">Oferecer serviço</a><a href="publicar-projeto.html">Publicar projeto</a></nav>
+    <nav class="site-footer-column" aria-label="Sua conta" data-footer-account><h2>Sua conta</h2><a href="login.html">Entrar</a><a href="cadastro.html">Criar conta</a></nav>
+    <div class="site-footer-bottom"><small>© <span id="footer-year">2026</span> Elora</small><a href="mailto:contato@elora.com.br">Fale com a gente</a></div>
+  </footer>
+</body>
+
+</html>

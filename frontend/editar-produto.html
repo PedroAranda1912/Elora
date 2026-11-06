@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f3f3">
+  <title>Editar anúncio — Elora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refinement.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
+  <header><a href="index.html" class="logo">elora<span class="logo-mark" aria-hidden="true"></span></a>
+    <nav id="nav-menu" aria-label="Navegação principal"></nav>
+  </header>
+  <main class="container publish-page" id="main-content" tabindex="-1">
+    <div class="page-intro">
+      <div>
+        <p class="catalog-eyebrow">Meus anúncios</p>
+        <h1>Editar produto</h1>
+        <p>Atualize as informações do seu anúncio.</p>
+      </div><a href="meus-produtos.html" class="btn btn-secondary">Voltar aos anúncios</a>
+    </div>
+    <form id="product-form" class="card account-form edit-product-form">
+      <div id="msg" class="alert" role="status" aria-live="polite"></div>
+      <div class="form-grid">
+        <div class="form-group form-wide"><label for="name">Título</label><input id="name" required minlength="4"
+            maxlength="160"></div>
+        <div class="form-group"><label for="category">Categoria</label><select id="category" required></select><input
+            id="other-category" placeholder="Digite a categoria" hidden></div>
+        <div class="form-group"><label for="conditionType">Condição</label><select id="conditionType">
+            <option value="NOVO">Novo</option>
+            <option value="USADO">Usado</option>
+          </select></div>
+        <div class="form-group"><label for="price">Preço (R$)</label><input id="price" type="number" min="0.01"
+            step="0.01" required></div>
+        <div class="form-group"><label for="stock">Estoque</label><input id="stock" type="number" min="0" step="1"
+            required></div>
+        <div class="form-group form-wide"><label for="description">Descrição</label><textarea id="description" rows="5"
+            required maxlength="1000"></textarea></div>
+        <div class="form-group"><label for="location">Localização</label><input id="location" maxlength="120"></div>
+        <div class="form-group"><label for="tags">Palavras-chave</label><input id="tags" maxlength="1000"></div>
+        <div class="form-group form-wide"><label for="imageUrl">URL da imagem</label><input id="imageUrl" type="url"
+            maxlength="500"></div>
+      </div><button class="btn" type="submit">Salvar alterações</button>
+    </form>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/edit-product.js"></script>
+  <script src="js/motion.js"></script>
+  <footer class="site-footer">
+    <div class="footer-brand-column">
+      <a href="index.html" class="footer-brand" aria-label="Elora, página inicial">elora<span class="logo-mark" aria-hidden="true"></span></a>
+      <p>Produtos, serviços e conexões da comunidade, num só lugar.</p>
+    </div>
+    <nav class="site-footer-column" aria-label="Explorar"><h2>Explorar</h2><a href="produtos.html">Produtos</a><a href="servicos.html">Serviços</a><a href="projetos.html">Projetos</a></nav>
+    <nav class="site-footer-column" aria-label="Publique"><h2>Publique</h2><a href="publicar-produto.html">Anunciar produto</a><a href="oferecer-servico.html">Oferecer serviço</a><a href="publicar-projeto.html">Publicar projeto</a></nav>
+    <nav class="site-footer-column" aria-label="Sua conta" data-footer-account><h2>Sua conta</h2><a href="login.html">Entrar</a><a href="cadastro.html">Criar conta</a></nav>
+    <div class="site-footer-bottom"><small>© <span id="footer-year">2026</span> Elora</small><a href="mailto:contato@elora.com.br">Fale com a gente</a></div>
+  </footer>
+</body>
+
+</html>

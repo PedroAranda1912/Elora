@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f3f3">
+  <title>Projetos disponíveis — Elora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refinement.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
+  <header><a href="index.html" class="logo">elora<span class="logo-mark" aria-hidden="true"></span></a>
+    <nav id="nav-menu" aria-label="Navegação principal"></nav>
+  </header>
+  <main class="container project-marketplace-page" id="main-content" tabindex="-1">
+    <section class="project-market-hero">
+      <div>
+        <p class="catalog-eyebrow">Trabalhos que combinam com você</p>
+        <h1>Projetos abertos para novas ideias.</h1>
+        <p>Encontre um pedido, apresente sua proposta e converse direto com quem precisa do seu talento.</p><a
+          class="btn" href="propostas.html">Acompanhar minhas propostas <span aria-hidden="true">→</span></a>
+      </div><a class="project-post-callout" href="publicar-projeto.html"><span class="project-post-icon"
+          aria-hidden="true">+</span><span><strong>Está procurando um profissional?</strong><small>Publique seu projeto
+            e receba propostas.</small></span><b aria-hidden="true">→</b></a>
+    </section>
+    <section class="project-filters-panel">
+      <div class="form-group"><label for="project-search">O que você procura?</label><input id="project-search"
+          type="search" placeholder="Ex.: site para uma loja, identidade visual"></div>
+      <div class="form-group"><label for="project-category">Categoria</label><select id="project-category">
+          <option value="">Todas as especialidades</option>
+        </select></div>
+      <div class="form-group"><label for="project-budget">Orçamento máximo</label><input id="project-budget"
+          type="number" min="1" step="0.01" placeholder="R$"></div>
+      <div class="form-group"><label for="project-location">Localização</label><input id="project-location"
+          type="search" placeholder="Cidade ou região"></div>
+      <div class="form-group"><label for="project-mode">Formato</label><select id="project-mode">
+          <option value="">Online ou presencial</option>
+          <option value="ONLINE">Online</option>
+          <option value="PRESENCIAL">Presencial</option>
+          <option value="AMBOS">Ambos</option>
+        </select></div><button id="clear-project-filters" class="btn btn-secondary" type="button">Limpar</button>
+    </section>
+    <section class="project-results-section">
+      <div class="project-results-heading">
+        <div>
+          <h2>Projetos disponíveis</h2>
+          <p id="project-results" aria-live="polite">Carregando…</p>
+        </div><a class="btn btn-secondary" href="meus-projetos.html">Meus projetos</a>
+      </div>
+      <div id="project-list" class="project-list">
+        <p class="empty-state">Buscando projetos…</p>
+      </div><button id="load-more-projects" class="btn btn-secondary load-more-button" type="button" hidden>Carregar
+        mais projetos</button>
+    </section>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/motion.js"></script>
+  <footer class="site-footer">
+    <div class="footer-brand-column">
+      <a href="index.html" class="footer-brand" aria-label="Elora, página inicial">elora<span class="logo-mark" aria-hidden="true"></span></a>
+      <p>Produtos, serviços e conexões da comunidade, num só lugar.</p>
+    </div>
+    <nav class="site-footer-column" aria-label="Explorar"><h2>Explorar</h2><a href="produtos.html">Produtos</a><a href="servicos.html">Serviços</a><a href="projetos.html">Projetos</a></nav>
+    <nav class="site-footer-column" aria-label="Publique"><h2>Publique</h2><a href="publicar-produto.html">Anunciar produto</a><a href="oferecer-servico.html">Oferecer serviço</a><a href="publicar-projeto.html">Publicar projeto</a></nav>
+    <nav class="site-footer-column" aria-label="Sua conta" data-footer-account><h2>Sua conta</h2><a href="login.html">Entrar</a><a href="cadastro.html">Criar conta</a></nav>
+    <div class="site-footer-bottom"><small>© <span id="footer-year">2026</span> Elora</small><a href="mailto:contato@elora.com.br">Fale com a gente</a></div>
+  </footer>
+</body>
+
+</html>

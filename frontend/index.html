@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0e13">
+  <meta name="description"
+    content="Encontre produtos e serviços anunciados pela comunidade Elora. Converse diretamente e combine os próximos passos.">
+  <title>Elora — produtos, serviços e boas conexões</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/refinement.css">
+</head>
+
+<body class="home-page">
+  <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
+  <header class="home-header">
+    <a href="index.html" class="logo" aria-label="Elora — início">elora<span class="logo-mark"
+        aria-hidden="true"></span></a>
+    <nav id="nav-menu" aria-label="Navegação principal"></nav>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <section class="home-hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Produtos e serviços, no mesmo marketplace
+        </p>
+        <h1 id="hero-title">O que você procura.<br><em>Quem pode fazer.</em></h1>
+        <p class="hero-intro">Encontre produtos e profissionais da comunidade. Tire suas dúvidas por mensagem e combine
+          os próximos passos diretamente.</p>
+        <form class="hero-search" id="home-search">
+          <div class="search-kind" role="group" aria-label="O que deseja buscar">
+            <button type="button" data-home-kind="PRODUCT" class="is-active" aria-pressed="true">Produtos</button>
+            <button type="button" data-home-kind="SERVICE" aria-pressed="false">Serviços</button>
+          </div>
+          <label class="sr-only" for="home-query">Busque produtos, serviços ou profissionais</label>
+          <input id="home-query" type="search" placeholder="O que você está procurando?" autocomplete="off">
+          <button type="submit" class="btn home-search-button"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.8" cy="10.8" r="6.8"></circle>
+              <path d="m16 16 5 5"></path>
+            </svg><span>Buscar</span></button>
+        </form>
+        <p class="hero-search-hint">Busque pelo nome, categoria ou habilidade.</p>
+      </div>
+      <div class="hero-marketplace" aria-label="Escolha uma área para explorar">
+        <div class="hero-marketplace-heading"><span>ELORA / MARKETPLACE</span><span>Escolha por onde começar</span>
+        </div>
+        <a class="marketplace-choice-card product-choice-card" href="produtos.html">
+          <span class="choice-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+              <path d="M4 8h16l-1 12H5L4 8Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+              <path d="M9 13h.01M15 13h.01"></path>
+            </svg></span>
+          <span class="choice-content"><span class="choice-kicker">01 / PRODUTOS</span><strong>Encontre algo que vale a
+              pena.</strong><span>Explore anúncios por categoria, condição e região.</span></span>
+          <svg class="choice-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14m-6-6 6 6-6 6"></path>
+          </svg>
+        </a>
+        <a class="marketplace-choice-card service-choice-card" href="servicos.html">
+          <span class="choice-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+              <path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-2-5.8L4 11l6-2.2L12 3Z"></path>
+              <path d="m19 16 .9 2.1L22 19l-2.1.9L19 22l-.9-2.1L16 19l2.1-.9L19 16Z"></path>
+            </svg></span>
+          <span class="choice-content"><span class="choice-kicker">02 / SERVIÇOS</span><strong>Encontre quem leva a
+              ideia adiante.</strong><span>Conheça profissionais e converse sobre seu projeto.</span></span>
+          <svg class="choice-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14m-6-6 6 6-6 6"></path>
+          </svg>
+        </a>
+        <div class="hero-trust-notes"><span><svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="m4 10 4 4 8-8"></path>
+            </svg>Perfis de quem anuncia</span><span><svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M17 9.5a6.5 6.5 0 0 1-6.5 6.5H5l1.5-3A6.5 6.5 0 1 1 17 9.5Z"></path>
+            </svg>Conversa direta</span></div>
+      </div>
+    </section>
+
+    <section class="home-feature-section home-latest" id="home-latest-products-section"
+      aria-labelledby="home-latest-products-title" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="catalog-eyebrow">Recém-anunciados</p>
+          <h2 id="home-latest-products-title">Produtos que acabaram de chegar.</h2>
+          <p>Os anúncios mais recentes da comunidade, de eletrônicos a móveis.</p>
+        </div>
+        <a href="produtos.html">Ver todos os produtos <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="grid product-grid" id="home-latest-products"></div>
+    </section>
+
+    <section class="home-feature-section home-latest" id="home-latest-services-section"
+      aria-labelledby="home-latest-services-title" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="catalog-eyebrow">Serviços em destaque</p>
+          <h2 id="home-latest-services-title">Profissionais com trabalhos entregues.</h2>
+          <p>Pacotes com preço e prazo definidos, de identidade visual a aulas particulares.</p>
+        </div>
+        <a href="servicos.html">Ver todos os serviços <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="grid service-grid" id="home-latest-services"></div>
+    </section>
+
+    <section class="home-categories" aria-labelledby="home-categories-title">
+      <div class="section-heading">
+        <div>
+          <p class="catalog-eyebrow">Navegue por categoria</p>
+          <h2 id="home-categories-title">Comece pelo que procura.</h2>
+          <p>Produtos e serviços têm espaços próprios para você encontrar mais rápido.</p>
+        </div>
+      </div>
+      <div class="home-category-columns">
+        <section class="home-category-panel" aria-labelledby="product-categories-title">
+          <div class="home-category-heading">
+            <div><span class="home-category-mark" aria-hidden="true"><svg viewBox="0 0 24 24">
+                  <path d="M4 8h16l-1 12H5L4 8Z"></path>
+                  <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+                </svg></span>
+              <div>
+                <h3 id="product-categories-title">Produtos</h3>
+                <p>Itens anunciados pela comunidade</p>
+              </div>
+            </div><a href="produtos.html">Ver todos <span aria-hidden="true">→</span></a>
+          </div>
+          <div id="home-product-categories" class="category-rail" aria-label="Categorias de produtos"><span
+              class="category-loading">Carregando categorias…</span></div>
+        </section>
+        <section class="home-category-panel service-category-panel" aria-labelledby="service-categories-title">
+          <div class="home-category-heading">
+            <div><span class="home-category-mark" aria-hidden="true"><svg viewBox="0 0 24 24">
+                  <path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-2-5.8L4 11l6-2.2L12 3Z"></path>
+                </svg></span>
+              <div>
+                <h3 id="service-categories-title">Serviços</h3>
+                <p>Habilidades para seu próximo projeto</p>
+              </div>
+            </div><a href="servicos.html">Ver todos <span aria-hidden="true">→</span></a>
+          </div>
+          <div id="home-service-categories" class="category-rail" aria-label="Categorias de serviços"><span
+              class="category-loading">Carregando categorias…</span></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="how-section" aria-labelledby="how-title">
+      <div class="how-intro">
+        <p class="catalog-eyebrow">Do primeiro clique ao combinado</p>
+        <h2 id="how-title">Uma boa troca começa com uma conversa.</h2>
+        <p>Encontre um anúncio, fale com quem publicou e combine os detalhes com clareza.</p><a class="how-explore-link"
+          href="produtos.html">Explorar o marketplace <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="how-steps">
+        <article><span class="step-number">01</span>
+          <h3>Explore</h3>
+          <p>Use busca, categoria e filtros para encontrar o que combina com você.</p>
+        </article>
+        <article><span class="step-number">02</span>
+          <h3>Conheça quem anuncia</h3>
+          <p>Veja o perfil e os detalhes antes de decidir.</p>
+        </article>
+        <article><span class="step-number">03</span>
+          <h3>Converse e combine</h3>
+          <p>Tire dúvidas por mensagem e acompanhe tudo na sua conta.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="community-cta">
+      <div>
+        <p class="catalog-eyebrow">Para quem vende ou presta serviços</p>
+        <h2>Seu próximo cliente pode estar procurando por você.</h2>
+        <p>Crie um anúncio de produto ou apresente o serviço que oferece.</p>
+      </div>
+      <div class="community-actions"><a href="vender.html" class="btn">Anunciar produto <span
+            aria-hidden="true">→</span></a><a href="oferecer-servico.html" class="btn btn-secondary">Oferecer serviço
+          <span aria-hidden="true">→</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-brand-column">
+      <a href="index.html" class="footer-brand" aria-label="Elora, página inicial">elora<span class="logo-mark" aria-hidden="true"></span></a>
+      <p>Produtos, serviços e conexões da comunidade, num só lugar.</p>
+    </div>
+    <nav class="site-footer-column" aria-label="Explorar"><h2>Explorar</h2><a href="produtos.html">Produtos</a><a href="servicos.html">Serviços</a><a href="projetos.html">Projetos</a></nav>
+    <nav class="site-footer-column" aria-label="Publique"><h2>Publique</h2><a href="publicar-produto.html">Anunciar produto</a><a href="oferecer-servico.html">Oferecer serviço</a><a href="publicar-projeto.html">Publicar projeto</a></nav>
+    <nav class="site-footer-column" aria-label="Sua conta" data-footer-account><h2>Sua conta</h2><a href="login.html">Entrar</a><a href="cadastro.html">Criar conta</a></nav>
+    <div class="site-footer-bottom"><small>© <span id="footer-year">2026</span> Elora</small><a href="mailto:contato@elora.com.br">Fale com a gente</a></div>
+  </footer>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/listing-cards.js"></script>
+  <script src="js/home.js"></script>
+
+  <script src="js/motion.js"></script>
+</body>
+
+</html>

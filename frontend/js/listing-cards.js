@@ -1,0 +1,23 @@
+// Cartões de anúncio compartilhados entre a home e as listagens de produtos e serviços.
+// Dependem de api.js (escapeHtml, formatCurrency, FALLBACK_IMG) e favorites.js (favoriteButton).
+
+function productCard(p, { actions = true } = {}) {
+    const details = `produto.html?id=${encodeURIComponent(p.id)}`;
+    const stock = Number(p.stock) || 0;
+    const compared = typeof getComparedProductIds === 'function' && getComparedProductIds().includes(Number(p.id));
+    const stockLabel = stock > 0 ? 'Disponível' : 'Sem estoque';
+    return `<article class="card listing-card product-listing-card"><a class="listing-image" href="${details}"><img src="${escapeHtml(p.imageUrl || FALLBACK_IMG)}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.onerror=null;this.src='${FALLBACK_IMG}'"></a>${favoriteButton('PRODUCT', p.id)}<div class="listing-card-copy"><div class="listing-meta"><span class="badge badge-status">${escapeHtml(p.category || 'Produto')}</span><span class="listing-condition">${p.conditionType === 'USADO' ? 'Usado' : 'Novo'}</span><span class="stock-badge ${stock > 0 ? 'is-available' : 'is-unavailable'}">${stockLabel}</span></div><h2><a href="${details}">${escapeHtml(p.name)}</a></h2><p class="listing-description">${escapeHtml(p.description || 'Consulte os detalhes do anúncio.')}</p><strong class="price">${formatCurrency(p.price)}</strong><div class="listing-seller-row"><a href="usuario.html?id=${p.owner?.id || ''}">${escapeHtml(p.owner?.name || 'Comunidade Elora')}</a><span>${escapeHtml(p.location || '')}</span></div>${actions ? `<div class="listing-card-actions"><a class="btn btn-secondary" href="${details}">Ver detalhes</a><button class="btn" type="button" data-add-product="${p.id}" ${stock <= 0 ? 'disabled' : ''}>${stock > 0 ? 'Adicionar' : 'Sem estoque'}</button></div><button class="listing-compare-button ${compared ? 'is-selected' : ''}" type="button" data-compare-product="${p.id}" aria-pressed="${compared}">${compared ? '✓ Na comparação' : 'Comparar'}</button>` : `<div class="listing-card-actions"><a class="btn btn-secondary" href="${details}">Ver detalhes</a></div>`}</div></article>`;
+}
+
+function serviceCard(service) {
+    const details = `servico.html?id=${encodeURIComponent(service.id)}`;
+    const owner = service.owner || {};
+    const avatar = owner.avatarUrl
+        ? `<img src="${escapeHtml(owner.avatarUrl)}" alt="" loading="lazy" onerror="this.remove()">`
+        : escapeHtml((owner.name || 'E').charAt(0).toUpperCase());
+    const packagePrice = service.packages?.length ? Math.min(...service.packages.map(item => Number(item.price)).filter(Number.isFinite)) : Number(service.price);
+    const delivery = service.packages?.length ? Math.min(...service.packages.map(item => Number(item.deliveryDays)).filter(Number.isFinite)) : Number(service.deliveryDays);
+    const stars = Number(service.providerRating || 0);
+    const level = service.providerLevel ? `<span class="provider-level" title="Nível por avaliação e trabalhos concluídos">${escapeHtml(service.providerLevel)}</span>` : '';
+    return `<article class="service-market-card"><a class="service-market-card-image" href="${details}"><img src="${escapeHtml(service.imageUrl || FALLBACK_IMG)}" alt="${escapeHtml(service.title)}" loading="lazy" onerror="this.onerror=null;this.src='${FALLBACK_IMG}'"><span class="service-card-category">${escapeHtml(service.category || 'Serviço')}</span></a>${favoriteButton('SERVICE', service.id)}<div class="service-market-card-body"><a class="service-market-title" href="${details}">${escapeHtml(service.title)}</a><div class="service-provider-line"><a class="service-provider-avatar" href="usuario.html?id=${encodeURIComponent(owner.id || '')}" aria-label="Ver perfil de ${escapeHtml(owner.name || 'prestador')}">${avatar}</a><a href="usuario.html?id=${encodeURIComponent(owner.id || '')}" class="service-provider-name">${escapeHtml(owner.name || 'Profissional da comunidade')}</a>${level}</div><div class="service-social-proof">${stars ? `<span class="service-rating"><span aria-hidden="true">★</span> ${stars.toFixed(1)} <small>(${Number(service.providerReviewCount || 0)})</small></span>` : '<span class="service-new-review">Sem avaliações</span>'}<span>${Number(service.completedWorkCount || 0)} trabalhos concluídos</span></div><div class="service-market-card-footer"><span class="service-delivery">${delivery > 0 ? `Até ${delivery} dias` : 'Prazo a combinar'}</span><span class="service-starting-price"><small>${service.packages?.length ? 'A partir de' : 'Preço'}</small><strong>${formatCurrency(Number.isFinite(packagePrice) ? packagePrice : service.price)}</strong></span></div><a class="btn service-card-cta" href="${details}">Ver serviço <span aria-hidden="true">→</span></a></div></article>`;
+}
